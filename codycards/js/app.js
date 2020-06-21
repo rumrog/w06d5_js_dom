@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   const newItemform = document.querySelector('#new-item-form');
   newItemform.addEventListener('submit', handleNewItemFormSubmit);
+
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
 })
 
 const handleNewItemFormSubmit = event => {
   event.preventDefault();
 
   const flashcardItem = createFlashcardItem(event.target);
-  const flashcard = document.querySelector('#flashcards');
-  flashcard.appendChild(flashcardItem);
+  const flashcards = document.querySelector('#flashcards');
+  flashcards.appendChild(flashcardItem);
 
   event.target.reset();
 }
@@ -30,4 +33,9 @@ const createFlashcardItem = form => {
   flashcardItem.appendChild(concept);
 
   return flashcardItem;
+}
+
+const handleDeleteAllClick = event => {
+  const flashcards = document.querySelector('#flashcards');
+  flashcards.innerHTML = '';
 }
