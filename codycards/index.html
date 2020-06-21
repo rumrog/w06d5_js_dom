@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <title>CodyCards</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css' />
+    <script src='js/app.js'></script>
+  </head>
+  
+  <body>
+    <form id='new-item-form'>
+      <div id='form-wrapper'>
+
+        <div class='form-item'>
+          <label for='language' class='primary'>Language</label>
+          <select id='language'>
+            <option value='' disabled selected></option>
+            <option value='JavaScript'>JavaScript</option>
+            <option value='HTML'>HTML</option> 
+            <option value='CSS'>CSS</option>
+            <option value='Ruby'>Ruby</option>
+            <option value='SQL'>SQL</option>
+          </select>
+        </div>
+
+        <div class='form-item'>
+          <label for='topic' class='primary'>Topic</label>
+          <input type='text' id='topic' required/>
+        </div>
+
+        <div class='form-item'>
+          <label for='Concept' class='primary'>Concept</label>
+          <input type='text' id='concept' required/>
+        </div>
+
+      </div>
+      <input type='submit' value='Save'/>
+    </form>
+
+  </body>
+</html>
