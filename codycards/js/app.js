@@ -36,6 +36,10 @@ const createFlashcardItem = form => {
   description.textContent = form.description.value;
   flashcardItem.appendChild(description);
 
+  const code = document.createElement('code');
+  code.textContent = form.code.value;
+  flashcardItem.appendChild(code);
+
   return flashcardItem;
 }
 
