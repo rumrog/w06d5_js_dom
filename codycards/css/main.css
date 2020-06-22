@@ -10,6 +10,11 @@ nav {
   padding-left: 1em;
   padding-top: 0.5em;
 }
+code {
+  background-color: #5E81AC;
+  border-radius: 10px;
+  color: white;
+}
 
 #form-wrapper {
   width: 100%;
