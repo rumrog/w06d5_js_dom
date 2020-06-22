@@ -17,21 +17,26 @@ const handleNewItemFormSubmit = event => {
 }
 
 const createFlashcardItem = form => {
+  // Flashcard Items
   const flashcardItem = document.createElement('li');
   flashcardItem.classList.add('flashcards-list-item');
 
+  // Language
   const language = document.createElement('p');
   language.textContent = form.language.value;
   flashcardItem.appendChild(language);
 
+  // Topic
   const topic = document.createElement('h2');
   topic.textContent = form.topic.value;
   flashcardItem.appendChild(topic);
 
+  // Concept
   const concept = document.createElement('h3');
   concept.textContent = form.concept.value;
   flashcardItem.appendChild(concept);
 
+  // Description Textarea and Show Button
   const button1 = document.createElement('button');
   const show1 = document.createTextNode('Show Description');
   button1.appendChild(show1);
@@ -43,6 +48,7 @@ const createFlashcardItem = form => {
   description.classList.add('item-description');
   flashcardItem.appendChild(description);
 
+  // Description Code block and Show Button
   const button2 = document.createElement('button');
   const show2 = document.createTextNode('Show Code Snippet');
   button2.appendChild(show2);
@@ -54,6 +60,7 @@ const createFlashcardItem = form => {
   code.classList.add('item-code');
   flashcardItem.appendChild(code);
 
+  // Return Flashcard
   return flashcardItem;
 }
 
@@ -79,3 +86,4 @@ const showCode = () => {
     itemCode.style.display = 'block';
   }
 }
+

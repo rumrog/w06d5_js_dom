@@ -1,6 +1,7 @@
 body {
   background-color: #ECEFF4;
   margin: 0;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
@@ -8,6 +9,42 @@ nav {
   background-color: #88C0D0;
   padding-left: 1em;
   padding-top: 0.5em;
+}
+
+#form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+  background-color: white;
+}
+
+.form-item {
+  margin-right: 1.8rem;
+}
+
+input[type=submit] {
+  background-color: #88C0D0;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+}
+
+input[type=submit]:hover {
+  background-color: #8FBCBB;
+}
+
+.flashcards-section {
+  padding: 1em;
 }
 
 .item-description,
