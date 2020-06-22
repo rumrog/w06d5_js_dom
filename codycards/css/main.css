@@ -1,5 +1,18 @@
 body {
   background-color: #ECEFF4;
+  margin: 0;
+  font-size: 16px;
+}
+
+nav {
+  background-color: #88C0D0;
+  padding-left: 1em;
+  padding-top: 0.5em;
+}
+
+.item-description,
+.item-code {
+  display: none;
 }
 
 #flashcards {

@@ -32,12 +32,26 @@ const createFlashcardItem = form => {
   concept.textContent = form.concept.value;
   flashcardItem.appendChild(concept);
 
+  const button1 = document.createElement('button');
+  const show1 = document.createTextNode('Show Description');
+  button1.appendChild(show1);
+  flashcardItem.appendChild(button1);
+  button1.addEventListener('click', showDescription);
+
   const description = document.createElement('p');
   description.textContent = form.description.value;
+  description.classList.add('item-description');
   flashcardItem.appendChild(description);
+
+  const button2 = document.createElement('button');
+  const show2 = document.createTextNode('Show Code Snippet');
+  button2.appendChild(show2);
+  flashcardItem.appendChild(button2);
+  button2.addEventListener('click', showCode);
 
   const code = document.createElement('code');
   code.textContent = form.code.value;
+  code.classList.add('item-code');
   flashcardItem.appendChild(code);
 
   return flashcardItem;
@@ -46,4 +60,22 @@ const createFlashcardItem = form => {
 const handleDeleteAllClick = event => {
   const flashcards = document.querySelector('#flashcards');
   flashcards.innerHTML = '';
+}
+
+const showDescription = () => {
+  const itemDescription = document.querySelector('.item-description');
+  if (itemDescription.style.display === 'block' ) {
+    itemDescription.style.display = 'none';
+  } else {
+    itemDescription.style.display = 'block';
+  }
+}
+
+const showCode = () => {
+  const itemCode = document.querySelector('.item-code');
+  if (itemCode.style.display === 'block') {
+    itemCode.style.display = 'none';
+  } else {
+    itemCode.style.display = 'block';
+  }
 }
